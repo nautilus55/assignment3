@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>ML Strength - Health and Fitness</title>
+        <script>
+            $(function(){
+                $("#header").load("../html/header.html")
+            });
+            
+            $(function(){
+                $("#footer").load("../html/footer.html")
+            });
+
+            $("#burgerbutton").click(function() {
+                $("navigation ul").css("display", "initial");
+            });
+        </script>
+    </head>
+    <body>
+        <header id="header">
+        </header>
+        <main>
+            <section>
+                <img src="../images/home_image.jpg" id="homeimage">
+                <div id="homecontentwrapper">
+                    <div id="hometext">
+                        <h2>Are you a health-conscious adult who wants to bring your training to the next level?</h2>
+                        <p>We train athletes – professional, collegiate, youth, and anybody that wants to train like an athlete. Our training is focused on speed, strength, power, and sports therapy. Interested?</p>
+                    </div>
+                    <a href="../pages/contact.html" id="contactbutton">Contact us today.</a>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+        </footer>
+    </body>
+</html>

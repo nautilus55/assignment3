@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+        <title>ML Strength - Health and Fitness</title>
+        <script>
+            $(function(){
+                $("#header").load("../html/header.html")
+            });
+            
+            $(function(){
+                $("#footer").load("../html/footer.html")
+            });
+
+            $(document).ready(function() {
+                $("#webform").validate({
+                    rules: {
+                        firstname : {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 70
+                        },
+                        lastname : {
+                            required: true,
+                            minlength: 2,
+                            maxlength: 70
+                        },
+                        age: {
+                            required: false,
+                            number: true,
+                            min: 16
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        phonenumber: {
+                            required: true,
+                            number: true,
+                            minlength: 10,
+                            maxlength: 10
+                        },
+                        message: {
+                            required: true,
+                            maxlength: 1000
+                        },
+                    }
+                });
+            });
+
+            function submitForm() {
+                if ($( "#webform" ).valid()) {
+                    $( "#webform" ).html( "<p id=\"submissionsuccess\">Thank you.<br>Your form has been submitted.<br>You should receive a response within 5 business days.</p>" );
+                } else {
+                    alert( "Please fill out the required fields correctly." );
+                }
+                return;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <header id="header">
+        </header>
+        <main>
+
+            <form id="webform" action="" method="" onsubmit="return false">
+                <h2>Send us an enquiry!</h2>
+                <label for="firstname" class="isrequired">First name:</label>
+                <div class="inputicons">
+                    <i class="fa-solid fa-person icon"></i>
+                    <input name="firstname" id="firstname" type="text" minlength="2" maxlength="70" placeholder="First name" class="inputfield" required>
+                </div>
+        
+                <label for="lastname" class="isrequired">Last name:</label>
+                <div class="inputicons">
+                    <i class="fa-solid fa-person icon"></i>
+                    <input name="lastname" id="lastname" type="text" minlength="2" maxlength="70" placeholder="Last name" required>
+                </div>
+
+                <p id="genderselect">Select your gender:</p>
+        
+                <div id="genderwrapper">
+                    <input type="radio" id="woman" name="gender" value="woman">
+                    <label for="woman" class="nohide">Woman</label>
+                    <input type="radio" id="man" name="gender" value="man">
+                    <label for="man" class="nohide">Man</label>
+                    <input type="radio" id="nogender" name="gender" value="nogender">
+                    <label for="nogender" class="nohide">Prefer not to say</label>
+                </div>
+                
+                <label for="age">Age:</label>
+                <div class="inputicons">
+                    <i class="fa-solid fa-user-group icon"></i>
+                    <input type="number" id="age" name="age" min="16" max="110" placeholder="Your age">
+                </div>
+
+                <label for="email" class="isrequired">Email address:</label>
+                <div class="inputicons">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <input type="email" id="email" name="email" maxlength="100" placeholder="Email (eg. bob@bepis.com)" required>
+                </div>
+
+                <label for="phonenumber" class="isrequired">Phone number:</label>
+                <div class="inputicons">
+                    <i class="fa-solid fa-phone icon"></i>
+                    <input type="tel" id="phonenumber" name="phonenumber" maxlength="10" pattern="[0-9]{10}" placeholder="Phone # (eg. 0123456789)" required>
+                </div>
+                
+                <label for="location">Location:</label>
+                <select id="location" name="location">
+                    <option value="">--</option>
+                    <option value="brisbanecity">Brisbane City</option>
+                    <option value="ashgrove">Ashgrove</option>
+                    <option value="chermside">Chermside</option>
+                    <option value="graceville">Graceville</option>
+                    <option value="westlake">West Lake</option>
+                </select> 
+        
+                <label for="message" class="isrequired">Message:</label>
+                <textarea id="message" name="message" rows="4" maxlength="1000" placeholder="Enter your message here" required></textarea>
+                
+                <div id="tcwrapper">
+                    <input type="checkbox" id="tandcagreement" name="tandcagreement" value="yes" required>
+                    <label for="tandcagreement" class="isrequired">Do you agree to the terms and conditions?</label> 
+                </div>
+                
+                <p id="helpbutton">Help?</p>
+
+                <div id="helpvideo">
+                    <video src="../videos/help_video.mp4" type="video/mp4" controls loop autoplay muted>
+                    </video>
+                </div>
+        
+                <input type="submit" id="submitbutton" value="Submit" onclick="submitForm()">
+                
+                <p id="requirednotice">Fields marked with a <font color="#FF0000">*</font> are required.</p>
+        
+            </form>
+            
+            
+
+            
+            
+
+        </main>
+        <footer id="footer">
+        </footer>
+    </body>
+</html>

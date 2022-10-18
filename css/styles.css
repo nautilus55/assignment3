@@ -1,0 +1,492 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-image: linear-gradient(140deg, #F2E8CF, #A7C957);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    transition: color 1s;
+    color: #386641;
+}
+
+
+a:hover {
+    transition: color 1s;
+    color: #BC4749;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    margin-bottom: 4vh;
+    border-bottom: 5px solid #386641;
+    background: #F2E8CF;
+}
+
+header h1 {
+    margin-left: 1em;
+}
+
+#burgerbutton {
+    display: none;
+}
+
+navigation {
+    margin-left: auto;
+    margin-right: 2em;
+}
+
+navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+navigation li {
+    display: inline-block;
+    padding: 0 1.5em 0 1.5em;
+    border-radius: 10px;
+    transition: background 1s;
+}
+
+navigation li:hover {
+    transition: background 1s;
+    background: #FFFFFF;
+}
+
+main {
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+section {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+img {
+    border-radius: 20px;
+}
+
+#homeimage {
+    object-fit: cover;
+    max-width: 60%;
+    margin-right: 5vw;
+}
+
+#hometext {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2.5em;
+}
+
+#homecontentwrapper {
+    margin: auto;
+}
+
+#contactbutton {
+    transition: border 1s, box-shadow 1s, color 1s;
+    padding: 1em;
+    text-decoration: none;
+    background: #FFFFFF;
+    border: 3px solid #386641;
+    box-shadow:#386641 3px 3px;
+    white-space: nowrap;
+}
+
+#contactbutton:hover {
+    transition: border 1s, box-shadow 1s, color 1s;
+    border: 3px solid #BC4749;
+    box-shadow:#BC4749 3px 3px;
+}
+
+
+#aboutml img {
+    object-fit: cover;
+    max-width: 20vw;
+    min-height: 80vh;
+    margin: auto;
+}
+
+#aboutmltext, #aboutownertext {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#aboutmltext {
+    margin: auto 2em;
+}
+
+#aboutownertext {
+    width: 40vw;
+    margin: auto 2em;
+}
+
+#aboutowner img {
+    max-height: 80vh;
+    max-width: 50%;
+    margin: auto;
+}
+
+section ul {
+    text-align: left;
+}
+
+#classescontent h2 {
+    text-align: center;
+}
+
+#classeslists > div {
+    padding: 2em;
+    margin: auto 1em;
+    border-radius: 20px;
+    width: 20vw;
+    min-height: 50vh;
+    background-size: cover;
+    border: 1px solid #386641;
+}
+
+#classeslist1, #classeslist2, #classeslist3 {
+    background-image: linear-gradient(180deg, #FFFFFF, #F2E8CF, #A7C957);
+}
+
+#classeslists {
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    width: 100%;
+    background: red;
+    margin: auto;
+    margin-bottom: 0;
+    text-align: center;
+}
+/* kill me
+form {
+    max-width: 400px;
+    margin: auto;
+}
+*/
+
+
+form {
+    background: #F2E8CF;
+    padding: 2em;
+    width: 30vw;
+    min-width: 440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.5em;
+    column-gap: 1em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+form h2 {
+    grid-column: 1 / 3;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+label {
+    grid-column: 1 / 2;
+}
+
+.isrequired::after {
+    content: "*";
+    color: #FF0000;
+}
+
+input, textarea {
+    grid-column: 2 / 3;
+    border: 2px solid #000000;
+    line-height: 1.5em;
+    border-radius: 5px;
+}
+
+input:placeholder-shown, textarea:placeholder-shown {
+    background-color: #DDDDDD;
+}
+
+
+input:focus, textarea:focus, input:checked + label {
+    background-color: #FFFFFF;
+}
+
+input:valid, textarea:valid {
+    border: 2px solid rgb(104, 173, 0);
+}
+
+input[type="radio"] + label, input[type="checkbox"] + label {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+/* Icon styling */
+
+input[type="text"], input[type="number"], input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+
+.inputicons i {
+    position: absolute;
+    padding: 6px;
+}
+
+.icon {
+    color: #386641;
+}
+
+/* Form jQuery styling */
+
+label.error {
+    color: #FF0000;
+    grid-column: 2 / 3;
+    margin: 0;
+}
+
+input.error, textarea.error {
+    border: 2px solid #FF0000;
+    font-weight: 300;
+    color: #FF0000;
+}
+
+/* More form */
+
+#genderwrapper {
+    margin: auto;
+    white-space: nowrap;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+}
+
+#tcwrapper {
+    grid-column: 2 / 3;
+}
+
+#submitbutton {
+    border: 2px solid #000000;
+}
+
+#helpbutton {
+    height: 1.5em;
+    width: 6em;
+    text-align: center;
+    margin:  1em auto auto auto;
+    background: #FFFFFF;
+    font-weight: bold;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#requirednotice {
+    grid-column: 2 / 3;
+}
+
+#submissionsuccess {   
+    color: red;
+    grid-column: 1 / 5;
+}
+
+video {
+    height: auto !important;
+    width: 100% !important;
+}
+
+#helpvideo {
+    display: flex;
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    width: 46vw;
+    padding: 40px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    visibility: hidden;
+}
+
+#helpbutton:hover ~ #helpvideo {
+    visibility: visible;
+    color: red;
+}
+
+#helpbutton:hover {
+    border: 2px solid #BC4749;
+    color: #BC4749;
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        width: 100%;
+    }
+
+    header {
+        position: relative;
+    }
+
+    navigation ul {
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        right: 0;
+        top: 82%;
+        list-style-type: none;
+        background: #F2E8CF;
+    }
+    
+    navigation li {
+        display: block;
+        padding: 0.5em;
+        border-radius: 10px;
+        transition: background 1s;
+    }
+    
+    #burgerbutton {
+        display: initial;
+        position: absolute;
+        right: 2%;
+        z-index: 3;
+    }
+    #burgerbutton:hover > div {
+        background: red;
+    }
+
+    #burgerline1, #burgerline2, #burgerline3 {
+        margin: 0.5em 0;
+        padding: 0.1em 0;
+        width: 50px;
+        height: 5px;
+        border-radius: 5px;
+        background: #386641;
+    }
+
+    section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #homeimage, #aboutml img, #aboutowner img,
+    #hometext, #aboutmltext, #aboutownertext {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    form {
+        width: 100%;
+        padding: 0;
+        grid-row-gap: 0px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .inputicons .fa-user-group {
+        display: none;
+    }
+
+    #lastname {
+    }
+
+    textarea, #tcwrapper, input, .inputicons {
+        width: 100%;
+        margin-top: 0.1em;
+        margin-bottom: 0.2em;
+        grid-column: span 3;
+        border-radius: unset;
+        box-sizing: border-box;
+    }
+
+    input:optional, select:optional, label, 
+    #genderselect, #requirednotice, .fa-user-group {
+        display: none;
+        visibility: none;
+    }
+
+    .isrequired::after {
+        content: "";
+    }
+
+    #tcwrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    #tcwrapper input {
+        grid-column: 1;
+        margin: 1.5em;
+        
+    }
+
+    #tcwrapper label {
+        display: initial;
+        grid-column: 2;
+        text-align: start;
+        white-space: nowrap;
+        margin: auto;
+    }
+
+    #helpbutton {
+        grid-row: 12;
+        grid-column: 2;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    input, .inputicons {
+        grid-column: 1fr;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    
+    #tcwrapper label {
+        white-space: unset;
+        text-align: center;
+    }
+
+}
+
+.hiddenelement {
+    display: none;
+}
