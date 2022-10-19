@@ -6,6 +6,7 @@ body {
     margin: 0;
     width: 100%;
     min-height: 100%;
+    text-align: center;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-size: 14px;
     background-image: linear-gradient(140deg, #386641, #A7C957);
@@ -53,7 +54,6 @@ header h1 {
 
 navigation ul {
     position: absolute;
-    text-align: center;
     z-index: 2;
     padding: 0;
     width: 15em;
@@ -111,7 +111,6 @@ section {
     margin: auto;
     display: flex;
     flex-direction: row;
-    text-align: center;
 }
 
 img {
@@ -185,14 +184,9 @@ img {
 
 /* Classes page */
 
-section ul {
-    text-align: left;
-}
-
 #classescontent h2 {
     margin: 0 auto 1em auto;
     padding: 1em;
-    text-align: center;
     background: #FFFFFF;
     width: 80%;
     border-radius: 20px;
@@ -211,6 +205,7 @@ section ul {
     min-height: 50vh;
     background-size: cover;
     border: 1px solid #386641;
+    text-align: left;
 }
 
 #classeslist1 {
@@ -235,7 +230,6 @@ footer {
     background-image: linear-gradient(180deg, #F2E8CF, #A7C957 10em);
     margin: auto;
     margin-bottom: 0;
-    text-align: center;
     border-top: 2px solid #386641;
 }
 
@@ -250,7 +244,6 @@ form {
     grid-template-columns: 1fr 1fr;
     row-gap: 0.5em;
     column-gap: 1em;
-    text-align: center;
     border-radius: 10px;
 }
 
@@ -284,8 +277,14 @@ input:focus, textarea:focus, input:checked + label {
     background-color: #FFFFFF;
 }
 
-input:valid, textarea:valid {
-    border: 2px solid rgb(104, 173, 0);
+input:required:valid, textarea:valid {
+    border: 2px solid #A7C957;
+}
+
+/* The below rule is just for the "Age" field. As an optional field it displays the green border indicating a valid input even if the user hasn't written anything unless further rules are applied. */
+
+input:optional:valid:not(:placeholder-shown) {
+    border: 2px solid #A7C957;
 }
 
 input[type="radio"] + label, input[type="checkbox"] + label {
@@ -316,7 +315,6 @@ textarea {
 #helpbutton {
     height: 1.5em;
     width: 6em;
-    text-align: center;
     margin:  1em auto auto auto;
     background: #FFFFFF;
     font-weight: bold;
@@ -335,7 +333,7 @@ textarea {
 }
 
 #submissionsuccess {   
-    color: red;
+    color: #000000;
     grid-column: 1 / 5;
 }
 
@@ -413,10 +411,6 @@ video {
         box-sizing: border-box;
     }
 
-    #classeslists ul {
-        vertical-align: middle;
-    }
-
     section, #classeslists {
         flex-direction: column;
         width: 100%;
@@ -429,6 +423,16 @@ video {
         max-width: 100%;
         border-radius: 0;
         box-sizing: border-box;
+    }
+
+    
+    #hometext {
+        margin-bottom: 2em;
+    }
+    
+    #aboutowner img {
+        max-height: unset;
+        max-width: unset;
     }
 
     /* Contact page and form mobile */
@@ -510,11 +514,6 @@ video {
         background: #FFFFFF;
         visibility: hidden;
     }
-
-    .hiddenelement {
-        display: none;
-    }
-
 }
 
 /* Minor tweaks for elements that don't display quite right at smaller screen sizes */
@@ -532,4 +531,8 @@ video {
         text-align: center;
     }
 
+}
+
+.hiddenelement {
+    display: none;
 }
