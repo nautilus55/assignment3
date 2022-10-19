@@ -478,6 +478,10 @@ video {
     .hideonmobile {
         display: none;
     }
+    
+    input:checked {
+        outline: 0;
+    }
 
     .isrequired::after {
         content: "";
