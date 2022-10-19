@@ -19,7 +19,6 @@ a {
     color: #386641;
 }
 
-
 a:hover {
     transition: color 1s;
     color: #BC4749;
@@ -38,6 +37,8 @@ h1 a {
     color: #000000;
 }
 
+/* Header and navigation */
+
 header {
     display: flex;
     position: relative;
@@ -49,28 +50,6 @@ header {
 header h1 {
     margin-left: 1em;
 }
-
-/*
-navigation {
-    margin-left: auto;
-    margin-right: 2em;
-}
-
-navigation ul {
-    display: block;
-    list-style-type: none;
-    padding: 0;
-}
-
-navigation li {
-    display: inline-block;
-    padding: 0 1.5em 0 1.5em;
-    border-radius: 10px;
-    transition: background 1s;
-}
-
-}
-*/
 
 navigation ul {
     position: absolute;
@@ -84,8 +63,6 @@ navigation ul {
     border-radius: 0 0 10px 10px;
     padding-top: 0.5em;
     background-image: linear-gradient(180deg, #F2E8CF, #A7C957 30em);
-    border-left: 2px solid #386641;
-    border-bottom: 2px solid #386641;
 }
 
 navigation li {
@@ -122,6 +99,8 @@ navigation li:hover {
     transition: background 0.3s;
 }
 
+/* */
+
 main {
     margin: auto;
     margin-bottom: 2em;
@@ -138,6 +117,8 @@ section {
 img {
     border-radius: 20px;
 }
+
+/* Index page */
 
 #homeimage {
     object-fit: cover;
@@ -172,6 +153,7 @@ img {
     box-shadow:#BC4749 3px 3px;
 }
 
+/* About pages */
 
 #aboutml img {
     object-fit: cover;
@@ -201,12 +183,24 @@ img {
     margin: auto;
 }
 
+/* Classes page */
+
 section ul {
     text-align: left;
 }
 
 #classescontent h2 {
+    margin: 0 auto 1em auto;
+    padding: 1em;
     text-align: center;
+    background: #FFFFFF;
+    width: 80%;
+    border-radius: 20px;
+}
+
+#classeslists {
+    display: flex;
+    flex-direction: row;
 }
 
 #classeslists > div {
@@ -219,14 +213,22 @@ section ul {
     border: 1px solid #386641;
 }
 
-#classeslist1, #classeslist2, #classeslist3 {
-    background-image: linear-gradient(180deg, #FFFFFF, #F2E8CF, #A7C957);
+#classeslist1 {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7)),
+    url("../images/classes_image_1.jpg");
 }
 
-#classeslists {
-    display: flex;
-    flex-direction: row;
+#classeslist2 {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7)),
+    url("../images/classes_image_2.jpg");
 }
+
+#classeslist3 {
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7)),
+    url("../images/classes_image_3.jpg");
+}
+
+/* Footer */
 
 footer {
     width: 100%;
@@ -236,13 +238,8 @@ footer {
     text-align: center;
     border-top: 2px solid #386641;
 }
-/* kill me
-form {
-    max-width: 400px;
-    margin: auto;
-}
-*/
 
+/* Contact page and form */
 
 form {
     background: #F2E8CF;
@@ -283,7 +280,6 @@ input:placeholder-shown, textarea:placeholder-shown {
     background-color: #DDDDDD;
 }
 
-
 input:focus, textarea:focus, input:checked + label {
     background-color: #FFFFFF;
 }
@@ -295,6 +291,52 @@ input:valid, textarea:valid {
 input[type="radio"] + label, input[type="checkbox"] + label {
     padding-left: 0.2em;
     padding-right: 0.2em;
+}
+
+#genderwrapper {
+    margin: auto;
+    white-space: nowrap;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+}
+
+#tcwrapper {
+    grid-column: 2 / 3;
+}
+
+#submitbutton {
+    border: 2px solid #000000;
+}
+
+#helpbutton {
+    height: 1.5em;
+    width: 6em;
+    text-align: center;
+    margin:  1em auto auto auto;
+    background: #FFFFFF;
+    font-weight: bold;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#helpbutton:hover {
+    border: 2px solid #BC4749;
+    color: #BC4749;
+}
+
+#requirednotice {
+    grid-column: 2 / 3;
+}
+
+#submissionsuccess {   
+    color: red;
+    grid-column: 1 / 5;
 }
 
 /* Icon styling */
@@ -329,48 +371,7 @@ input.error, textarea.error {
     color: #FF0000;
 }
 
-/* More form */
-
-#genderwrapper {
-    margin: auto;
-    white-space: nowrap;
-}
-
-textarea {
-    resize: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 0px;
-}
-
-#tcwrapper {
-    grid-column: 2 / 3;
-}
-
-#submitbutton {
-    border: 2px solid #000000;
-}
-
-#helpbutton {
-    height: 1.5em;
-    width: 6em;
-    text-align: center;
-    margin:  1em auto auto auto;
-    background: #FFFFFF;
-    font-weight: bold;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#requirednotice {
-    grid-column: 2 / 3;
-}
-
-#submissionsuccess {   
-    color: red;
-    grid-column: 1 / 5;
-}
+/* Video */
 
 video {
     height: auto !important;
@@ -393,12 +394,8 @@ video {
     visibility: visible;
 }
 
-#helpbutton:hover {
-    border: 2px solid #BC4749;
-    color: #BC4749;
-}
-
 @media only screen and (max-width: 900px) {
+
     main {
         width: 100%;
     }
@@ -406,10 +403,21 @@ video {
     navigation ul {
         width: 100%;
         box-sizing: border-box;
-        border-left: 0;
     }
 
-    section {
+    #classeslists > div {
+        width: 100%;
+        min-height: 0;
+        margin: 0.5em 0;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    #classeslists ul {
+        vertical-align: middle;
+    }
+
+    section, #classeslists {
         flex-direction: column;
         width: 100%;
     }
@@ -417,13 +425,16 @@ video {
     #homeimage, #aboutml img, #aboutowner img,
     #hometext, #aboutmltext, #aboutownertext {
         width: 100%;
-        margin: 0;
+        margin: 0.5em 0;
         max-width: 100%;
         border-radius: 0;
         box-sizing: border-box;
     }
 
+    /* Contact page and form mobile */
+
     form {
+        min-width: 0;
         width: 100%;
         padding: 0;
         grid-row-gap: 0px;
@@ -432,7 +443,7 @@ video {
     }
     
     form h2 {
-        grid-column: 2 / 3;
+        grid-column: 2;
         white-space: nowrap;
         margin: 0.5em 0;
     }
@@ -449,10 +460,10 @@ video {
         box-sizing: border-box;
     }
 
-    input:optional, select:optional, label, 
-    #genderselect, #requirednotice, .fa-user-group {
+    input:optional, select:optional, label,
+    #genderselect, #requirednotice, .fa-user-group,
+    .hideonmobile {
         display: none;
-        visibility: none;
     }
 
     .isrequired::after {
@@ -500,6 +511,18 @@ video {
         visibility: hidden;
     }
 
+    .hiddenelement {
+        display: none;
+    }
+
+}
+
+/* Minor tweaks for elements that don't display quite right at smaller screen sizes */
+
+@media only screen and (max-width: 440px) {
+    #tcwrapper label {
+        margin-left: 1em;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -509,8 +532,4 @@ video {
         text-align: center;
     }
 
-}
-
-.hiddenelement {
-    display: none;
 }
