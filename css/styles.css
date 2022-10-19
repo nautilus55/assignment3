@@ -234,6 +234,7 @@ footer {
 }
 
 /* Contact page and form */
+/* Form-specific pseudo-selectors used: :valid, :checked, :optional, :required, and :placeholder-shown. */
 
 form {
     background: #F2E8CF;
@@ -281,7 +282,11 @@ input:required:valid, textarea:valid {
     border: 2px solid #A7C957;
 }
 
-/* The below rule is just for the "Age" field. As an optional field it displays the green border indicating a valid input even if the user hasn't written anything unless further rules are applied. */
+input:checked {
+    outline: 2px solid #386641;
+}
+
+/* The below rule is just for the "Age" field. As an optional field it displays the green border indicating a valid input even if the user hasn't written anything unless these further rules are applied. */
 
 input:optional:valid:not(:placeholder-shown) {
     border: 2px solid #A7C957;
