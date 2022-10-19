@@ -515,10 +515,6 @@ video {
         margin-bottom: 1em;
     }
 
-    input, .inputicons {
-        grid-column: 1fr;
-    }
-
     #helpvideo {
         top: 8%;
         width: 90vw;
