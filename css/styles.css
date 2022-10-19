@@ -260,7 +260,7 @@ label {
 
 .isrequired::after {
     content: "*";
-    color: #FF0000;
+    color: #790000;
 }
 
 input, textarea {
@@ -337,6 +337,7 @@ textarea {
 #requirednotice {
     grid-column: 2 / 3;
     background: #FFFFFF;
+    color: #790000;
     border-radius: 10px;
 }
 
@@ -366,7 +367,7 @@ input[type="tel"] {
 /* Form jQuery styling */
 
 label.error {
-    color: #FF0000;
+    color: #790000;
     grid-column: 2 / 3;
     margin: 0;
 }
@@ -374,7 +375,7 @@ label.error {
 input.error, textarea.error {
     border: 2px solid #FF0000;
     font-weight: 300;
-    color: #FF0000;
+    color: #790000;
 }
 
 /* Video */
