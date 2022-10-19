@@ -209,17 +209,17 @@ img {
 }
 
 #classeslist1 {
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7)),
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
     url("../images/classes_image_1.jpg");
 }
 
 #classeslist2 {
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7)),
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
     url("../images/classes_image_2.jpg");
 }
 
 #classeslist3 {
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7)),
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
     url("../images/classes_image_3.jpg");
 }
 
