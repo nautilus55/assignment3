@@ -516,7 +516,7 @@ video {
     }
 }
 
-/* Minor tweaks for elements that don't display quite right at smaller screen sizes */
+/* Minor tweaks for elements that don't display right at smaller screen sizes */
 
 @media only screen and (max-width: 440px) {
     #tcwrapper label {
