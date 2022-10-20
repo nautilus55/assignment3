@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
     height: 100%;
 }
@@ -9,18 +16,28 @@ body {
     text-align: center;
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-size: 14px;
+    background-image: -o-linear-gradient(310deg, #386641, #A7C957);
     background-image: linear-gradient(140deg, #386641, #A7C957);
     background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 a {
+    -webkit-transition: color 1s;
+    -o-transition: color 1s;
     transition: color 1s;
     color: #386641;
 }
 
 a:hover {
+    -webkit-transition: color 1s;
+    -o-transition: color 1s;
     transition: color 1s;
     color: #BC4749;
 }
@@ -41,6 +58,8 @@ h1 a {
 /* Header and navigation */
 
 header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     margin-bottom: 4vh;
@@ -62,6 +81,8 @@ navigation ul {
     list-style-type: none;
     border-radius: 0 0 10px 10px;
     padding-top: 0.5em;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F2E8CF), color-stop(30em, #A7C957));
+    background-image: -o-linear-gradient(top, #F2E8CF, #A7C957 30em);
     background-image: linear-gradient(180deg, #F2E8CF, #A7C957 30em);
 }
 
@@ -70,10 +91,14 @@ navigation li {
     display: block;
     padding: 0.5em 0;
     border-radius: 10px;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
     transition: background 1s;
 }
 
 navigation li:hover {
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
     transition: background 1s;
     background: #FFFFFF;
 }
@@ -86,6 +111,8 @@ navigation li:hover {
 }
 #burgerbutton:hover > div {
     background: #BC4749;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
     transition: background 0.3s;
 }
 
@@ -96,6 +123,8 @@ navigation li:hover {
     height: 5px;
     border-radius: 5px;
     background: #386641;
+    -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
     transition: background 0.3s;
 }
 
@@ -109,7 +138,12 @@ main {
 section {
     width: 85%;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 }
 
@@ -120,6 +154,7 @@ img {
 /* Index page */
 
 #homeimage {
+    -o-object-fit: cover;
     object-fit: cover;
     max-width: 60%;
     margin-right: 5vw;
@@ -137,24 +172,35 @@ img {
 }
 
 #contactbutton {
+    -webkit-transition: border 1s, color 1s, -webkit-box-shadow 1s;
+    transition: border 1s, color 1s, -webkit-box-shadow 1s;
+    -o-transition: border 1s, box-shadow 1s, color 1s;
     transition: border 1s, box-shadow 1s, color 1s;
+    transition: border 1s, box-shadow 1s, color 1s, -webkit-box-shadow 1s;
     padding: 1em;
     text-decoration: none;
     background: #FFFFFF;
     border: 3px solid #386641;
+    -webkit-box-shadow:#386641 3px 3px;
     box-shadow:#386641 3px 3px;
     white-space: nowrap;
 }
 
 #contactbutton:hover {
+    -webkit-transition: border 1s, color 1s, -webkit-box-shadow 1s;
+    transition: border 1s, color 1s, -webkit-box-shadow 1s;
+    -o-transition: border 1s, box-shadow 1s, color 1s;
     transition: border 1s, box-shadow 1s, color 1s;
+    transition: border 1s, box-shadow 1s, color 1s, -webkit-box-shadow 1s;
     border: 3px solid #BC4749;
+    -webkit-box-shadow:#BC4749 3px 3px;
     box-shadow:#BC4749 3px 3px;
 }
 
 /* About pages */
 
 #aboutml img {
+    -o-object-fit: cover;
     object-fit: cover;
     max-width: 20vw;
     min-height: 80vh;
@@ -193,7 +239,12 @@ img {
 }
 
 #classeslists {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 }
 
@@ -209,16 +260,28 @@ img {
 }
 
 #classeslist1 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.9)), color-stop(rgba(242,232,207,0.9)), color-stop(130%, rgba(167,201,87,0.7))),
+    url("../images/classes_image_1.jpg");
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
+    url("../images/classes_image_1.jpg");
     background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
     url("../images/classes_image_1.jpg");
 }
 
 #classeslist2 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.9)), color-stop(rgba(242,232,207,0.9)), color-stop(130%, rgba(167,201,87,0.7))),
+    url("../images/classes_image_2.jpg");
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
+    url("../images/classes_image_2.jpg");
     background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
     url("../images/classes_image_2.jpg");
 }
 
 #classeslist3 {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.9)), color-stop(rgba(242,232,207,0.9)), color-stop(130%, rgba(167,201,87,0.7))),
+    url("../images/classes_image_3.jpg");
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
+    url("../images/classes_image_3.jpg");
     background-image: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242,232,207,0.9), rgba(167,201,87,0.7) 130%),
     url("../images/classes_image_3.jpg");
 }
@@ -227,6 +290,8 @@ img {
 
 footer {
     width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F2E8CF), color-stop(10em, #A7C957));
+    background-image: -o-linear-gradient(top, #F2E8CF, #A7C957 10em);
     background-image: linear-gradient(180deg, #F2E8CF, #A7C957 10em);
     margin: auto;
     margin-bottom: 0;
@@ -241,20 +306,28 @@ form {
     padding: 2em;
     width: 30vw;
     min-width: 440px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1em 1fr;
     grid-template-columns: 1fr 1fr;
     row-gap: 0.5em;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
     column-gap: 1em;
     border-radius: 10px;
 }
 
 form h2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1 / 3;
     margin: 0;
     margin-bottom: 1em;
 }
 
 label {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1 / 2;
 }
 
@@ -264,10 +337,20 @@ label {
 }
 
 input, textarea {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
     border: 2px solid #000000;
     line-height: 1.5em;
     border-radius: 5px;
+}
+
+input:-moz-placeholder-shown, textarea:-moz-placeholder-shown {
+    background-color: #DDDDDD;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    background-color: #DDDDDD;
 }
 
 input:placeholder-shown, textarea:placeholder-shown {
@@ -287,6 +370,14 @@ input:checked {
 }
 
 /* The below rule is just for the "Age" field. As an optional field it displays the green border indicating a valid input even if the user hasn't written anything unless these further rules are applied. */
+
+input:optional:valid:not(:-moz-placeholder-shown) {
+    border: 2px solid #A7C957;
+}
+
+input:optional:valid:not(:-ms-input-placeholder) {
+    border: 2px solid #A7C957;
+}
 
 input:optional:valid:not(:placeholder-shown) {
     border: 2px solid #A7C957;
@@ -311,6 +402,8 @@ textarea {
 }
 
 #tcwrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
 }
 
@@ -335,6 +428,8 @@ textarea {
 }
 
 #requirednotice {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
     background: #FFFFFF;
     color: #790000;
@@ -343,6 +438,8 @@ textarea {
 
 #submissionsuccess {   
     color: #000000;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
     grid-column: 1 / 5;
 }
 
@@ -352,6 +449,7 @@ input[type="text"], input[type="number"], input[type="email"],
 input[type="tel"] {
     width: 100%;
     padding-left: 25px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -368,6 +466,8 @@ input[type="tel"] {
 
 label.error {
     color: #790000;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
     margin: 0;
 }
@@ -386,6 +486,8 @@ video {
 }
 
 #helpvideo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     top: 2%;
@@ -409,6 +511,7 @@ video {
 
     navigation ul {
         width: 100%;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
 
@@ -417,10 +520,14 @@ video {
         min-height: 0;
         margin: 0.5em 0;
         border-radius: 0;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
 
     section, #classeslists {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width: 100%;
     }
@@ -431,6 +538,7 @@ video {
         margin: 0.5em 0;
         max-width: 100%;
         border-radius: 0;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
 
@@ -451,11 +559,13 @@ video {
         width: 100%;
         padding: 0;
         grid-row-gap: 0px;
+        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         border-radius: 0;
     }
     
     form h2 {
+        -ms-grid-column: 2;
         grid-column: 2;
         white-space: nowrap;
         margin: 0.5em 0;
@@ -468,8 +578,10 @@ video {
         width: 100%;
         margin-top: 0.1em;
         margin-bottom: 0.2em;
+        -ms-grid-column-span: 3;
         grid-column: span 3;
         border-radius: unset;
+        -webkit-box-sizing: border-box;
         box-sizing: border-box;
     }
 
@@ -488,13 +600,16 @@ video {
     }
 
     #tcwrapper {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
     #tcwrapper input {
+        -ms-grid-column: 1;
         grid-column: 1;
         margin: 1.5em;
         
@@ -502,6 +617,7 @@ video {
 
     #tcwrapper label {
         display: initial;
+        -ms-grid-column: 2;
         grid-column: 2;
         text-align: start;
         white-space: nowrap;
@@ -509,7 +625,9 @@ video {
     }
 
     #helpbutton {
+        -ms-grid-row: 12;
         grid-row: 12;
+        -ms-grid-column: 2;
         grid-column: 2;
         margin-top: 1em;
         margin-bottom: 1em;
