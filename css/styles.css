@@ -136,7 +136,7 @@ navigation li:hover {
     transition: background 0.3s;
 }
 
-/* */
+/* Common HTML for main part of page */
 
 main {
     margin: auto;
@@ -486,7 +486,7 @@ input.error, textarea.error {
     color: #790000;
 }
 
-/* Video */
+/* Form video */
 
 video {
     height: auto !important;
@@ -510,6 +510,8 @@ video {
 #helpbutton:hover ~ #helpvideo {
     visibility: visible;
 }
+
+/* General mobile styling */
 
 @media only screen and (max-width: 900px) {
 
@@ -560,7 +562,7 @@ video {
         max-width: unset;
     }
 
-    /* Contact page and form mobile */
+    /* Contact page and form mobile styling */
 
     form {
         min-width: 0;
